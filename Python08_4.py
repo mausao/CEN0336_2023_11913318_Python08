@@ -26,7 +26,7 @@ for geneId in sequencia.keys():
         frameId_reverse = "frame_-" + str(frame+1)
         codons_frames[geneId][frameId_reverse] = codonsReverse
             
-with open ("Python_08.codons-frame6.nt", "w") as outputFile:
+with open ("Python_08.codons-6frames.nt", "w") as outputFile:
     for geneId in codons_frames.keys():
         for frame in codons_frames[geneId]:
             headline = geneId + "_" + frame + "\n"

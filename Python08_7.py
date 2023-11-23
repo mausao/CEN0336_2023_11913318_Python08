@@ -77,5 +77,5 @@ with open ("Python_08.orf-longest.nt", "w") as outputFile:
                     posEnd = i.end(1) 
                     longestCodon = codons_frames[geneId][frame][posStart:posEnd]
         longestCodon = " ".join(longestCodon)
-        resposta = geneId + "\t" + frame + "\n" + longestCodon + "\n" + longestProtein + "\n"
+        resposta = geneId + "\t" + longestFrame + "\n" + longestCodon + "\n" + longestProtein + "\n"
         outputFile.write(resposta)

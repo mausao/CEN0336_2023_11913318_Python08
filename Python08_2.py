@@ -17,4 +17,4 @@ with open ("Python_08.codons-frame-1.nt", "w") as outputFile:
         codons = re.findall(r".{3}", sequencia[geneId])
         headline = geneId + "-frame-1-codons\n"
         outputFile.write(headline)
-        outputFile.write(codons + "\n")
+        outputFile.write(" ".join(codons) + "\n")

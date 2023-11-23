@@ -10,10 +10,14 @@ with open ("Python_08.fasta") as fasta:
         else:
             linha = linha.strip().replace("\n", "")
             sequencias[geneId] += linha
-for geneId, sequencia in sequencias.items():
-    for frames in range(3):
-        headline = geneId + "-frame-"+ str(frames+1) + "codons"
-        print(headline)
-        frame = sequencia[frames:]
-        framePrint = re.findall(r".{3}", frame)
-        print(framePrint, "\n")
+
+with open ("Python_08.codons-3frames.nt", "w") as outputFile:
+    for geneId, sequencia in sequencias.items():
+        for frames in range(3):
+            headline = geneId + "-frame-"+ str(frames+1) + "codons" + "\n"
+            outputFile.write(headline)
+            frame = sequencia[frames:]
+            framePrint = re.findall(r".{3}", frame)
+            framePrint = " ".join(framePrint) + "\n"
+            outputFile.write(framePrint)
+

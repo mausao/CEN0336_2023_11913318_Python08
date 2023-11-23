@@ -73,5 +73,5 @@ with open ("Python_08.translated-longest.aa", "w") as outputFile:
                 if len(i) > len(longestProtein):
                     longestProtein = i
                     longestFrame = frame
-        resposta = geneId + longestProtein + longestFrame + "\n"
+        resposta = geneId + longestFrame + "\n" + longestProtein + "\n"
         outputFile.write(resposta)
